@@ -16,6 +16,14 @@
         width:500px;
         text-align:left
       }
+      a {
+        /*text-decoration: none;*/
+        color: #2980b9;
+      }
+
+      #new {
+        color: #27ae60;
+      }
   </style>
 </head>
 <body>
@@ -26,6 +34,10 @@
     <li><a href="/songs/<%=index%>" title=""><%=song[:title]%></a></li>
   <% end %>
   </ol>
+  </div>
+  <div>
+      <a id="new" href="/songs/new">Add New Song</a>
+
   </div>
 </body>
 </html>

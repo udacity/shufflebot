@@ -1,6 +1,118 @@
-<h1>Add New Song</h1>
+<!-- <h1>Add New Song</h1>
 <form action="/songs" method="post" accept-charset="utf-8">
- <input type="text" placeholder="title">
- <input type="text" placeholder="youtube url">
+ <input type="text" placeholder="title" name="song[title]">
+ <input type="text" placeholder="youtube url" name="song[url]">
  <input type="submit">
-</form>
+</form> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css" media="screen">
+	h1 {
+		color: #fff;
+		font-size: 50px;
+		font-weight: normal;
+		margin: 0;
+	}
+	
+	body {
+	background: #24323E;
+	font-family: sans-serif;
+	font-size: 10px;
+	text-align: center;
+}
+
+form {
+	text-align: left;
+	background: #fff;
+	padding: 4em 4em 2em;
+	max-width: 400px;
+	margin: 100px auto 0;
+	margin-top: 10px;
+	box-shadow: 0 0 1em #222;
+	border-radius: 5px;
+}
+
+p {
+	margin: 0 0 3em 0;
+	position: relative;
+}
+
+label {
+	display: block;
+	font-size: 1.6em;
+	margin: 0 0 .5em;
+	color: #333;
+}
+
+input {
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+	outline: none
+}
+
+input[type="text"],
+input[type="password"] {
+	background: #f5f5f5;
+	border: 1px solid #e5e5e5;
+	font-size: 1.6em;
+	padding: .8em .5em;
+	border-radius: 5px;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+	background: #fff
+}
+
+img {
+	width: 300px;
+}
+
+input[type="submit"] {
+	background: #02B3E4;
+	box-shadow: 0 3px 0 0 #1D3C6A;
+	border-radius: 5px;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+	display: block;
+	font-size: 2em;
+	line-height: 1.6em;
+	margin: 2em 0 0;
+	outline: none;
+	padding: .8em 0;
+	text-shadow: 0 1px #68B25B;
+}
+
+	</style>
+</head>
+<body>
+<!-- <h1>Add New Song</h1>
+<form action="/songs" method="post" accept-charset="utf-8">
+ <input type="text" placeholder="title" name="song[title]">
+ <input type="text" placeholder="youtube url" name="song[url]">
+ <input type="submit">
+</form> -->
+<img src="http://i.imgur.com/IMMIu3Z.png" alt="">
+<h1>Add A New Song</h1>
+<form action="/songs" method="post">
+			<p>
+				<label for="title">Song Title</label>
+				<input id="title" name="title" type="text">
+			</p>
+			<p>
+				<label for="url">Youtube URL</label>
+				<input id="url" name="url" type="text">
+			</p>
+			
+			<p>
+				<input type="submit" value="SUBMIT" id="submit">
+			</p>
+		</form>
+	</body>
+</body>
+</html>

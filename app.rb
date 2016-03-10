@@ -32,4 +32,7 @@ get '/songs/:id' do
 end
 
 post '/songs' do
+	new_song = params[:song]
+	songs.push(new_song)
+	redirect '/songs'
 end

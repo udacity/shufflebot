@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style type="text/css">
+    body 
+      { 
+        text-align:center;
+        font-family:helvetica,arial;
+        font-size:22px;
+        color:#888;
+        margin:20px
+      }
+      h1 {
+      	color: #2c3e50;
+      	margin-bottom: 0;
+      }
+
+      h2 {
+      	margin-top: 0;
+      }
+    #c 
+      {
+
+        margin:0 auto;
+  
+      }
+      a {
+      	text-decoration: none;
+      	color: #2980b9;
+      }
+  </style>
+</head>
+<body>
+	<h1>Sinatra Songs</h1>
+  <h2><%=@song[:title]%></h2>
+  <div id="c">
+  <iframe width="420" height="315"
+src="<%=@song[:url]%>?autoplay=1">
+</iframe>
+  </div>
+  <div>
+  	<a href="/songs">Back</a>
+  </div>
+</body>
+</html>
+

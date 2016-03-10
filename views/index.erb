@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style type="text/css">
+    body 
+      { 
+        text-align:center;
+        font-family:helvetica,arial;
+        font-size:22px;
+        color:#888;
+        margin:20px
+      }
+    #c 
+      {
+        margin:0 auto;
+        width:500px;
+        text-align:left
+      }
+  </style>
+</head>
+<body>
+  <h2>Sinatra Songs</h2>
+  <div id="c">
+  <ol>
+  <% @songs.each_with_index do |song, index|%>
+    <li><a href="/songs/<%=index%>" title=""><%=song[:title]%></a></li>
+  <% end %>
+  </ol>
+  </div>
+</body>
+</html>

@@ -2,41 +2,79 @@
 <html>
 <head>
   <style type="text/css">
-    body 
-      { 
-        text-align:center;
-        font-family:helvetica,arial;
-        font-size:22px;
-        color:#888;
-        margin:20px
-      }
-    #c 
-      {
-        margin:0 auto;
-        width:500px;
-        text-align:left
-      }
-      a {
-        /*text-decoration: none;*/
-        color: #2980b9;
-      }
+  h1 {
+    color: #fff;
+    font-size: 50px;
+    font-weight: normal;
+    margin: 0;
+  }
 
-      #new {
-        color: #27ae60;
-      }
+  body { 
+    text-align:center;
+    font-family:helvetica,arial;
+    font-size:22px;
+    color:#888;
+    background: #24323E;
+    margin:20px
+    }
+
+  #c {
+    margin:0 auto;
+    width:500px;
+    text-align:left
+  }
+  
+  a {
+    color: #2980b9;
+  }
+
+  img {
+    width: 300px;
+  }
+
+  #container {
+    background: #fff;
+    padding: 1em;
+    max-width: 400px;
+    margin: 100px auto 0;
+    margin-top: 10px;
+    box-shadow: 0 0 1em #222;
+    border-radius: 5px;
+    width:500px;
+    text-align:left
+  }
+
+  #new {
+    background: #02B3E4;
+    box-shadow: 0 3px 0 0 #1D3C6A;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    /*font-size: 2em;*/
+    line-height: 1.6em;
+    /*margin: 2em 0 0;*/
+    /*outline: none;*/
+    /*padding: .8em 0;*/
+    text-shadow: 0 1px #68B25B;
+  }
+
   </style>
 </head>
 <body>
-  <h2>Sinatra Songs</h2>
-  <div id="c">
+
+<img src="http://i.imgur.com/IMMIu3Z.png" alt="">
+<h1>Sinatra Songs</h1>
+  <div id="container">
   <ol>
   <% @songs.each_with_index do |song, index|%>
     <li><a href="/songs/<%=index%>" title=""><%=song[:title]%></a></li>
   <% end %>
   </ol>
-  </div>
-  <div>
-      <a id="new" href="/songs/new">Add New Song</a>
+        <a id="new" href="/songs/new">Add New Song</a>
 
   </div>
 </body>

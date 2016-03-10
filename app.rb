@@ -1,11 +1,11 @@
 require 'sinatra'
 songs = [
-		{title: "My Way", year: 1969, url: "https://www.youtube.com/v/5AVOpNR2PIs"},
-		{title: "That's Life", year: 1969, url: "https://www.youtube.com/v/KIiUqfxFttM"},
-		{title: "Come Fly With Me", year: 1969, url: "https://www.youtube.com/v/Euci0_BBmNE"},
-		{title: "Luck Be A Lady", year: 1969, url: "https://www.youtube.com/v/QIfinjlLPF4"},
-		{title: "The Way You Look Tonight", year: 1969, url: "https://www.youtube.com/v/h9ZGKALMMuc"},
-		{title: "Fly Me To The Moon", year: 1969, url: "https://www.youtube.com/v/mQR0bXO_yI8"}
+		{title: "My Way", year: 1969, url: "https://www.youtube.com/embed/5AVOpNR2PIs"},
+		{title: "That's Life", year: 1969, url: "https://www.youtube.com/embed/KIiUqfxFttM"},
+		{title: "Come Fly With Me", year: 1969, url: "https://www.youtube.com/embed/Euci0_BBmNE"},
+		{title: "Luck Be A Lady", year: 1969, url: "https://www.youtube.com/embed/QIfinjlLPF4"},
+		{title: "The Way You Look Tonight", year: 1969, url: "https://www.youtube.com/embed/h9ZGKALMMuc"},
+		{title: "Fly Me To The Moon", year: 1969, url: "https://www.youtube.com/embed/mQR0bXO_yI8"}
 	]
 
 get '/' do

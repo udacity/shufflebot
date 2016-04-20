@@ -70,11 +70,11 @@
 <h1>Sinatra Songs</h1>
   <div id="container">
   <ol>
-  <% @songs.each_with_index do |song, index|%>
-    <li><a href="/songs/<%=index%>" title=""><%=song[:title]%></a></li>
+  <% @data.each do |album|%>
+    <li><a href="/songs/<%=album['collectionId']%>" title=""><%=album["collectionName"]%></a></li>
   <% end %>
   </ol>
-        <a id="new" href="/songs/new">Add New Song</a>
+        <a id="new" href="/songs/new">New Search</a>
 
   </div>
 </body>

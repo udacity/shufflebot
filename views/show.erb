@@ -9,6 +9,12 @@
     margin: 0;
   }
 
+  .thumb {
+    width: 100px;
+    display: block;    
+    margin: 0 auto;
+  }
+
   h2 {
     margin: 0;
     margin-bottom: 10px;
@@ -75,9 +81,14 @@
 <img src="http://i.imgur.com/IMMIu3Z.png" alt="">
 <h1>Sinatra Songs</h1>
   <div id="container">
-  <h2><%=@song[:title]%></h2>
-    <iframe width="397" height="200" src="<%=@song[:url]%>?autoplay=1"> </iframe>
-    <a id="new" href="/songs">Back To Playlist</a>
+  <h2><%=@album["collectionName"]%></h2>
+  <img class="thumb" src="<%=@album['artworkUrl100']%>" alt="">
+  <ol>
+  <% @songs.each do |song| %>
+    <li><%=song["trackName"]%></li>
+  <% end %>
+  </ol>
+    <a id="new" href="/songs/new">Search Again</a>
   </div>
 </body>
 </html>

@@ -1,4 +1,7 @@
 require 'sinatra'
+require "json"
+require "typhoeus"
+
 songs = [
 		{title: "My Way", year: 1969, url: "https://www.youtube.com/embed/5AVOpNR2PIs"},
 		{title: "That's Life", year: 1969, url: "https://www.youtube.com/embed/KIiUqfxFttM"},
@@ -17,7 +20,15 @@ get '/about' do
 end
 
 get '/songs' do
-	@songs = songs
+	if params[:artist]
+		search = params[:artist].gsub(/\s/,'+')
+	else
+		search = "frank+sinatra"
+	end
+	res = Typhoeus.get "https://itunes.apple.com/search?term=#{search}&&entity=album&limit=5"
+	parsed = JSON.parse res.body
+	@data = parsed["results"]
+	@songs = parsed["results"]
 	erb :index
 end
 
@@ -25,9 +36,13 @@ get '/songs/new' do
 	erb :new
 end
 
+
 get '/songs/:id' do
-	id = params[:id].to_i
-	@song = songs[id]
+	id = params[:id]
+	res = Typhoeus.get "http://itunes.apple.com/lookup?id=#{id}&entity=song"
+	parsed = JSON.parse res.body
+	@songs = parsed["results"]
+	@album = @songs.shift
 	erb :show
 end
 

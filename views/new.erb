@@ -91,24 +91,13 @@ input[type="submit"] {
 	</style>
 </head>
 <body>
-<!-- <h1>Add New Song</h1>
-<form action="/songs" method="post" accept-charset="utf-8">
- <input type="text" placeholder="title" name="song[title]">
- <input type="text" placeholder="youtube url" name="song[url]">
- <input type="submit">
-</form> -->
 <img src="http://i.imgur.com/IMMIu3Z.png" alt="">
-<h1>Add A New Song</h1>
-<form action="/songs" method="post">
+<h1>Search By Artist</h1>
+<form action="/songs" method="get">
 			<p>
-				<label for="title">Song Title</label>
-				<input id="title" name="title" type="text">
+				<label for="artist">Artist Name</label>
+				<input id="title" name="artist" type="text">
 			</p>
-			<p>
-				<label for="url">Youtube URL</label>
-				<input id="url" name="url" type="text">
-			</p>
-			
 			<p>
 				<input type="submit" value="SUBMIT" id="submit">
 			</p>
